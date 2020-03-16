@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Specialized;
 
 namespace Generics
 {
@@ -7,9 +7,9 @@ namespace Generics
     {
         public static void Main(string[] args)
         {
-            static ArrayList GenerateNames()
+            static StringCollection GenerateNames()
             {
-                ArrayList names = new ArrayList();
+                StringCollection names = new StringCollection();
                 names.Add("Alpha");
                 names.Add("Beta");
                 names.Add("Gamma");
@@ -18,7 +18,7 @@ namespace Generics
                 return names;
             }
 
-            static void PrintNames(ArrayList names)
+            static void PrintNames(StringCollection names)
             {
                 foreach (string name in names)
                 {
