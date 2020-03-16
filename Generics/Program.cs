@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace Generics
 {
@@ -6,17 +7,18 @@ namespace Generics
     {
         public static void Main(string[] args)
         {
-            static string[] GenerateNames()
+            static ArrayList GenerateNames()
             {
-                string[] names = new string[4];
-                names[0] = "Gamma";
-                names[1] = "Vlissides";
-                names[2] = "Johnson";
-                names[3] = "Helm";
+                ArrayList names = new ArrayList();
+                names.Add("Alpha");
+                names.Add("Beta");
+                names.Add("Gamma");
+                names.Add("Delta");
+                names.Add("Epsilon");
                 return names;
             }
 
-            static void PrintNames(string[] names)
+            static void PrintNames(ArrayList names)
             {
                 foreach (string name in names)
                 {
