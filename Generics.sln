@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generics.csproj", "{187D8F82-DE90-413A-AD33-795D064E64AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{187D8F82-DE90-413A-AD33-795D064E64AB}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{187D8F82-DE90-413A-AD33-795D064E64AB}.Debug|anycpu.Build.0 = Debug|anycpu
+		{187D8F82-DE90-413A-AD33-795D064E64AB}.Release|anycpu.ActiveCfg = Release|anycpu
+		{187D8F82-DE90-413A-AD33-795D064E64AB}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
