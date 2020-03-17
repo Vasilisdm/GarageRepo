@@ -8,24 +8,32 @@ namespace Generics
     {
         public static void Main(string[] args)
         {
-            static List<string> GenerateNames()
+            List<int> numbers = new List<int>();
+
+            numbers.Add(5);
+            numbers.Add(1);
+            numbers.Add(7);
+
+            List<int> firstTwo = CopyAtMost<int>(numbers, 2);
+            Console.WriteLine($"The first 2 elements of the numbers list copied, to FirstTwo list");
+
+            foreach (int number in firstTwo)
             {
-                List<string> names = new List<string>();
-                names.Add("Alpha");
-                names.Add("Beta");
-                names.Add("Gamma");
-                names.Add("Delta");
-                names.Add("Epsilon");
-                return names;
+                Console.WriteLine($"{number}");
+            }
+        }
+
+
+        public static List<T> CopyAtMost<T>(List<T> input, int maxElements)
+        {
+            int actualCount = Math.Min(input.Count, maxElements);
+            List<T> ret = new List<T>(actualCount);
+            for (int i = 0; i < actualCount; i++)
+            {
+                ret.Add(input[i]);
             }
 
-            static void PrintNames(List<string> names)
-            {
-                foreach (string name in names)
-                {
-                    Console.WriteLine(name);
-                }
-            }
+            return ret;
         }
     }
 }
