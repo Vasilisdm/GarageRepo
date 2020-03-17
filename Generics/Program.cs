@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Globalization;
 
 namespace Generics
 {
@@ -23,6 +24,15 @@ namespace Generics
             }
         }
 
+
+        public static void PrintItems<T>(List<T> items) where T : IFormattable
+        {
+            CultureInfo culture = CultureInfo.InvariantCulture;
+            foreach (T item in items)
+            {
+                Console.WriteLine(item.ToString(null, culture));
+            }
+        }
 
         public static List<T> CopyAtMost<T>(List<T> input, int maxElements)
         {
