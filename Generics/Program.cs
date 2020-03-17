@@ -14,7 +14,7 @@ namespace Generics
             numbers.Add(1);
             numbers.Add(7);
 
-            List<int> firstTwo = CopyAtMost<int>(numbers, 2);
+            List<int> firstTwo = CopyAtMost(numbers, 2);
             Console.WriteLine($"The first 2 elements of the numbers list copied, to FirstTwo list");
 
             foreach (int number in firstTwo)
