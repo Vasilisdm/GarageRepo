@@ -45,5 +45,18 @@ namespace Generics
 
             return ret;
         }
+
+
+        public static T LastOrDefault<T>(IEnumerable<T> source)
+        {
+            T ret = default(T);
+
+            foreach (T item in source)
+            {
+                ret = item;
+            }
+
+            return ret;
+        }
     }
 }
