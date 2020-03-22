@@ -4,8 +4,12 @@
     {
         public static void Main(string[] args)
         {
-            Helpers.PrintType<string>();
-            Helpers.PrintType<int>();
+            GenericCounter<string>.Increment();
+            GenericCounter<string>.Increment();
+            GenericCounter<string>.Display();
+            GenericCounter<int>.Display();
+            GenericCounter<int>.Increment();
+            GenericCounter<int>.Display();
         }
     }
 }
