@@ -6,13 +6,11 @@ namespace Generics
     {
         public static void Main(string[] args)
         {
-            int? noValue = new int?();
-            object noValueBoxed = noValue;
-            Console.WriteLine($"The boxed value is null: {noValueBoxed == null}");
+            // If I use the GetType on noValue it throws a null reference.
+            //int? noValue = new int?();
 
             int? someValue = new int?(5);
-            object someValueBoxed = someValue;
-            Console.WriteLine($"The boxed value is not null and has a type of :{someValueBoxed.GetType()}");
+            Console.WriteLine($"The type of someValue is: {someValue.GetType()}");
         }
     }
 }
